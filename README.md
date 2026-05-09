@@ -87,11 +87,9 @@ IT-Automation-Scripts/
 
 ---
 
-* Company name is irrelevant for this repo's purpose.
-
-** DomainName is irrelevant for this repo's purpose.
-
-*** DomainName is irrelevant for this repo's purpose.
+- *Company name is irrelevant for this repo's purpose.
+- **DomainName is irrelevant for this repo's purpose.
+- ***DomainName is irrelevant for this repo's purpose.
 
 ## Disclaimer
 
