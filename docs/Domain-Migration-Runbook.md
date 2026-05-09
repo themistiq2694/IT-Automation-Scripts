@@ -1,6 +1,6 @@
 # Runbook: Domain Migration – Subdomain to Parent Domain
 
-**Project:** `europe.temenosgroup.com` → `temenosgroup.com`  
+**Project:** `europe.domain_name.com` → `domain_name.com`  
 **Scope:** 200+ users  
 **Outcome:** Zero data loss, zero unplanned outages  
 **Author:** Mihail-Petre Dragutoiu
