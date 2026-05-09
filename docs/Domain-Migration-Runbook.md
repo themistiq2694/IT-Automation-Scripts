@@ -15,7 +15,7 @@ Migration of all user accounts from a regional subdomain (`europe.temenosgroup.c
 
 ## Pre-Migration Checklist
 
-- [ ] New UPN suffix (`temenosgroup.com`) added to Azure AD / Entra ID custom domains
+- [ ] New UPN suffix (`domain_name.com`) added to Azure AD / Entra ID custom domains
 - [ ] New suffix verified (DNS TXT record confirmed)
 - [ ] Exchange Online hybrid connector updated for new domain
 - [ ] MX and Autodiscover DNS records updated
@@ -30,7 +30,7 @@ Migration of all user accounts from a regional subdomain (`europe.temenosgroup.c
 
 ### Step 1 – Export Baseline Snapshot
 ```powershell
-.\Export-PreMigration-Snapshot.ps1 -OldSuffix "europe.temenosgroup.com"
+.\Export-PreMigration-Snapshot.ps1 -OldSuffix "europe.domain_name.com"
 ```
 Save the output CSV in a safe location. This is your rollback reference.
 
@@ -39,8 +39,8 @@ Save the output CSV in a safe location. This is your rollback reference.
 ### Step 2 – Dry Run (WhatIf)
 ```powershell
 .\Migrate-UPNSuffix.ps1 `
-    -OldSuffix "europe.temenosgroup.com" `
-    -NewSuffix "temenosgroup.com" `
+    -OldSuffix "europe.domain_name.com" `
+    -NewSuffix "domain_name.com" `
     -WhatIf
 ```
 Review the WhatIf log. Confirm the user list and expected UPN changes are correct.
@@ -52,8 +52,8 @@ Run in batches (e.g. 50 users at a time) to allow validation between groups.
 
 ```powershell
 .\Migrate-UPNSuffix.ps1 `
-    -OldSuffix "europe.temenosgroup.com" `
-    -NewSuffix "temenosgroup.com"
+    -OldSuffix "europe.domain_name.com" `
+    -NewSuffix "domain_name.com"
 ```
 
 Monitor for FAILED entries in the log CSV after each batch.
@@ -64,7 +64,7 @@ Monitor for FAILED entries in the log CSV after each batch.
 ```powershell
 .\Validate-PostMigration.ps1 `
     -SnapshotCsv "C:\Reports\DomainMigration\PreMigration_Snapshot.csv" `
-    -NewSuffix "temenosgroup.com"
+    -NewSuffix "domain_name.com"
 ```
 
 All users should show `OK – Migrated`. Investigate any exceptions immediately.
@@ -81,7 +81,7 @@ All users should show `OK – Migrated`. Investigate any exceptions immediately.
 
 ### Step 6 – User Communication
 Send post-migration notice:
-- New login: `firstname.lastname@temenosgroup.com`
+- New login: `firstname.lastname@domain_name.com`
 - Old address still receives mail (proxy address retained) for transition period
 - Outlook may prompt to re-enter credentials – use new UPN
 
