@@ -8,8 +8,8 @@
 
 ## Overview
 
-This repository contains PowerShell scripts developed and used during 10+ years of enterprise IT support at Temenos Group, covering ~270 users in a hybrid Windows/cloud environment. Scripts are organized by domain and reflect real-world operational scenarios including migrations, identity management, and endpoint automation.
-
+This repository contains PowerShell scripts developed and used during 10+ years of enterprise IT support at "Company Name"*, covering ~270 users in a hybrid Windows/cloud environment. Scripts are organized by domain and reflect real-world operational scenarios, including migrations, identity management, and endpoint automation.
+* - Company name is irrelevant for this repo's purpose.
 ---
 
 ## Repository Structure
@@ -49,7 +49,7 @@ IT-Automation-Scripts/
 ├── User-Lifecycle/
 │   ├── New-UserOnboarding.ps1               # End-to-end new hire provisioning
 │   ├── Remove-UserOffboarding.ps1           # Secure leaver offboarding (disable, revoke, convert mailbox)
-│   ├── Update-UserRoleChange.ps1            # Internal transfer / role change handler
+│   ├── Update-UserRoleChange.ps1            # Internal transfer/role change handler
 │   └── templates/
 │       └── onboarding_template.csv          # CSV template for bulk onboarding
 │
@@ -67,11 +67,13 @@ IT-Automation-Scripts/
 
 | Project | Year | Scope | Outcome |
 |---|---|---|---|
-| Domain Migration (`europe.temenosgroup.com` → `temenosgroup.com`) | 2023 | 200+ users | Zero data loss, zero downtime |
+| Domain Migration (`europe.domain_name.com`** → `domain_name.com`***) | 2023 | 200+ users | Zero data loss, zero downtime |
 | OneDrive Migration (File Server → OneDrive for Business) | 2021 | ~200 users | Smooth rollout with adoption training |
 | Windows 11 + Autopilot Migration | 2025 | 270+ devices | Zero critical incidents, Entra-only management |
 | MFA Rollout | 2018 | Org-wide | Full compliance achieved, zero compromises |
 | User Onboarding / Offboarding Automation | 2015–2026 | ~270 users | Reduced provisioning time, consistent audited lifecycle |
+** - DomainName is irrelevant for this repo's purpose
+*** - DomainName is irrelevant for this repo's purpose
 
 ---
 
