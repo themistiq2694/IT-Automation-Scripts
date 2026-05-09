@@ -9,7 +9,7 @@
 
 ## Overview
 
-Migration of all user accounts from a regional subdomain (`europe.temenosgroup.com`) to the corporate parent domain (`temenosgroup.com`), including UPN changes, proxy address updates, and email routing reconfiguration in Exchange Hybrid.
+Migration of all user accounts from a regional subdomain (`europe.domain_name.com`) to the corporate parent domain (`domain_name.com`), including UPN changes, proxy address updates, and email routing reconfiguration in Exchange Hybrid.
 
 ---
 
