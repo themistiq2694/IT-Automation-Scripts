@@ -9,7 +9,7 @@
 
 ## Overview
 
-Phased rollout of MFA across the entire organisation, including pre-rollout testing, user communication, pilot group, and full enforcement. Scripts automate status tracking, bulk enablement, and non-compliant user identification with reminder capability.
+Phased rollout of MFA across the entire organisation, including pre-rollout testing, user communication, pilot group, and full enforcement. Scripts automate status tracking, bulk enablement, and non-compliant user identification with a reminder capability.
 
 ---
 
@@ -69,7 +69,7 @@ Ask pilot users to register at https://aka.ms/mfasetup and test login.
 .\Get-MFANonCompliant.ps1
 
 # Report + send reminder emails
-.\Get-MFANonCompliant.ps1 -SendReminder -SenderAddress "it-support@temenosgroup.com"
+.\Get-MFANonCompliant.ps1 -SendReminder -SenderAddress "it-support@domain_name.com"
 ```
 
 ### Step 5 – Final Enforcement
@@ -82,7 +82,7 @@ After registration deadline:
 ```powershell
 .\Get-MFAStatusReport.ps1
 ```
-All users should show `Enforced`. Share summary with management.
+All users should show `Enforced`. Share the summary with management.
 
 ---
 
@@ -103,7 +103,7 @@ Please take 5 minutes NOW to register:
 2. Sign in with your corporate account
 3. Register the Microsoft Authenticator app (recommended)
 
-Questions? Contact IT Support at it-support@temenosgroup.com
+Questions? Contact IT Support at it-support@domain_name.com
 
 IT Support Team
 ```
@@ -120,7 +120,7 @@ If a user loses access to their MFA method (new phone, lost device):
 **Via MSOnline (PowerShell):**
 ```powershell
 # Clear registered MFA methods (forces re-registration on next login)
-Set-MsolUser -UserPrincipalName "user@temenosgroup.com" `
+Set-MsolUser -UserPrincipalName "user@domain_name.com" `
     -StrongAuthenticationMethods @()
 ```
 
