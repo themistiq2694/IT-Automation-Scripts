@@ -29,7 +29,7 @@ Standardised, audited procedures for the full user lifecycle: onboarding new hir
 See `templates/onboarding_template.csv` for the required CSV format.
 
 ### What the Script Does
-1. Creates AD user account with standardised naming (`f.lastname@temenosgroup.com`)
+1. Creates AD user account with standardised naming (`f.lastname@domain_name.com`)
 2. Sets attributes: title, department, manager, office
 3. Adds to department and role-based security groups
 4. Assigns M365 license (usage location: RO)
@@ -47,7 +47,7 @@ See `templates/onboarding_template.csv` for the required CSV format.
 | Field | Format | Example |
 |---|---|---|
 | SamAccountName | `firstinitiallastname` | `jdoe` |
-| UPN | `f.lastname@temenosgroup.com` | `j.doe@temenosgroup.com` |
+| UPN | `f.lastname@domain_name.com` | `j.doe@domain_name.com` |
 | Display Name | `First Last` | `John Doe` |
 
 ---
@@ -63,17 +63,17 @@ See `templates/onboarding_template.csv` for the required CSV format.
 ```powershell
 # Standard offboarding with manager mailbox access
 .\Remove-UserOffboarding.ps1 `
-    -UserPrincipalName "john.doe@temenosgroup.com" `
-    -ManagerUPN "jane.smith@temenosgroup.com"
+    -UserPrincipalName "john.doe@domain_name.com" `
+    -ManagerUPN "jane.smith@domain_name.com"
 
 # Dry run first for verification
 .\Remove-UserOffboarding.ps1 `
-    -UserPrincipalName "john.doe@temenosgroup.com" `
+    -UserPrincipalName "john.doe@domain_name.com" `
     -WhatIf
 ```
 
 ### What the Script Does
-1. Disables AD account immediately
+1. Disables the AD account immediately
 2. Resets password to random (prevents re-enable bypass)
 3. Revokes all active Microsoft 365 / Azure AD sessions
 4. Blocks M365 sign-in
@@ -106,14 +106,14 @@ After 90 days, request deletion via ITSM ticket to the Exchange/M365 team.
 ### Role Change Script
 ```powershell
 .\Update-UserRoleChange.ps1 `
-    -UserPrincipalName "john.doe@temenosgroup.com" `
+    -UserPrincipalName "john.doe@domain_name.com" `
     -NewTitle "Senior Analyst" `
     -NewDepartment "Finance" `
-    -NewManager "dan.ionescu@temenosgroup.com" `
+    -NewManager "dan.ionescu@domain_name.com" `
     -GroupsToAdd "Finance-Team,Finance-SharePoint" `
     -GroupsToRemove "IT-Support,IT-SharePoint" `
-    -SharedMailboxToAdd "finance@temenosgroup.com" `
-    -SharedMailboxToRemove "it-support@temenosgroup.com"
+    -SharedMailboxToAdd "finance@domain_name.com" `
+    -SharedMailboxToRemove "it-support@domain_name.com"
 ```
 
 ### What the Script Does
