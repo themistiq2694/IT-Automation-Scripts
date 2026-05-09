@@ -9,7 +9,7 @@
 ## Overview
 
 This repository contains PowerShell scripts developed and used during 10+ years of enterprise IT support at "Company Name"*, covering ~270 users in a hybrid Windows/cloud environment. Scripts are organized by domain and reflect real-world operational scenarios, including migrations, identity management, and endpoint automation.
-* - Company name is irrelevant for this repo's purpose.
+
 ---
 
 ## Repository Structure
@@ -72,8 +72,6 @@ IT-Automation-Scripts/
 | Windows 11 + Autopilot Migration | 2025 | 270+ devices | Zero critical incidents, Entra-only management |
 | MFA Rollout | 2018 | Org-wide | Full compliance achieved, zero compromises |
 | User Onboarding / Offboarding Automation | 2015–2026 | ~270 users | Reduced provisioning time, consistent audited lifecycle |
-** - DomainName is irrelevant for this repo's purpose
-*** - DomainName is irrelevant for this repo's purpose
 
 ---
 
@@ -88,6 +86,9 @@ IT-Automation-Scripts/
 - Appropriate admin permissions per script (Global Admin or delegated roles)
 
 ---
+* - Company name is irrelevant for this repo's purpose.
+** - DomainName is irrelevant for this repo's purpose.
+*** - DomainName is irrelevant for this repo's purpose.
 
 ## Disclaimer
 
