@@ -1,0 +1,19 @@
+# Logs and reports - never commit real data
+*.csv
+*.log
+*.txt
+!docs/*.md
+
+# Sensitive config
+*.json
+secrets.ps1
+config.ps1
+
+# OS artifacts
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Temp
+*.tmp
+*.bak
