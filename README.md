@@ -86,9 +86,9 @@ IT-Automation-Scripts/
 - Appropriate admin permissions per script (Global Admin or delegated roles)
 
 ---
-  - * - Company name is irrelevant for this repo's purpose.
-  - ** - DomainName is irrelevant for this repo's purpose.
-  - *** - DomainName is irrelevant for this repo's purpose.
+* Company name is irrelevant for this repo's purpose.
+** DomainName is irrelevant for this repo's purpose.
+*** DomainName is irrelevant for this repo's purpose.
 
 ## Disclaimer
 
