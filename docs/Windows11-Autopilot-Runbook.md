@@ -48,11 +48,11 @@ In-place upgrade was evaluated but rejected due to:
 ```
 [1] Verify Windows 11 hardware compatibility
         ↓
-[2] Confirm OneDrive sync complete (all data safe)
+[2] Confirm OneDrive sync is complete (all data safe)
         ↓
 [3] Collect & upload Autopilot hardware hash
         ↓
-[4] Validate Autopilot enrollment in Intune portal
+[4] Validate Autopilot enrollment in the Intune portal
         ↓
 [5] Run Pre-Wipe Checklist (interactive confirmation)
         ↓
@@ -108,7 +108,7 @@ Also verify in Intune Portal:
 ```powershell
 .\Post-Wipe-Checklist.ps1
 ```
-All checklist items must be confirmed by the technician. Log is saved automatically.
+The technician must confirm all checklist items. Log is saved automatically.
 
 ### Step 6 – Initiate Reset
 Via Settings (user-friendly):
@@ -121,8 +121,8 @@ Via MDM/Intune (remote):
 After reset, the device:
 1. Connects to network (Ethernet recommended for reliability)
 2. Detects Autopilot profile via hardware hash
-3. Applies organization branding on OOBE screen
-4. User signs in with Entra ID (`firstname.lastname@temenosgroup.com`)
+3. Applies organization branding on the OOBE screen
+4. User signs in with Entra ID (`firstname.lastname@domain_name.com`)
 5. Enrollment Status Page shows app/policy deployment progress
 
 ### Step 8 – Post-Enrollment Validation
