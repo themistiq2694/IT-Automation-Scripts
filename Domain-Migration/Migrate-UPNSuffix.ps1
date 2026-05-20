@@ -4,7 +4,7 @@
 #               Includes dry-run mode, logging, and rollback CSV generation.
 # Author      : Mihail-Petre Dragutoiu
 # Context     : Used during migration from europe.temenosgroup.com → temenosgroup.com
-# Usage       : .\Migrate-UPNSuffix.ps1 -OldSuffix "europe.temenosgroup.com" -NewSuffix "temenosgroup.com" [-WhatIf]
+# Usage       : .\Migrate-UPNSuffix.ps1 -OldSuffix "europe.domain_name.com" -NewSuffix "domain_name.com" [-WhatIf]
 
 param(
     [Parameter(Mandatory)]
