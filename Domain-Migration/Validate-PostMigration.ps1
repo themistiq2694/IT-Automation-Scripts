@@ -3,7 +3,7 @@
 #               all UPNs were successfully migrated to the new domain suffix.
 #               Generates a discrepancy report for any failures.
 # Author      : Mihail-Petre Dragutoiu
-# Usage       : .\Validate-PostMigration.ps1 -SnapshotCsv "C:\Reports\PreMigration_Snapshot.csv" -NewSuffix "temenosgroup.com"
+# Usage       : .\Validate-PostMigration.ps1 -SnapshotCsv "C:\Reports\PreMigration_Snapshot.csv" -NewSuffix "domain_name.com"
 
 param(
     [Parameter(Mandatory)]
