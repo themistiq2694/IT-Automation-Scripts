@@ -3,7 +3,7 @@
 #               Creates AD account, assigns groups, provisions M365 license,
 #               creates shared mailbox access, and generates a welcome summary.
 # Author      : Mihail-Petre Dragutoiu
-# Context     : Used to standardise and accelerate user provisioning at Temenos (~270 users)
+# Context     : Used to standardise and accelerate user provisioning in the Company I used to work for (~270 users)
 # Requires    : ActiveDirectory module, MSOnline, ExchangeOnlineManagement
 # Usage       : .\New-UserOnboarding.ps1 -CsvPath "C:\Onboarding\new_hires.csv"
 #
@@ -15,8 +15,8 @@ param(
     [Parameter(Mandatory)]
     [string]$CsvPath,
 
-    [string]$DefaultOU      = "OU=Users,OU=CORP,DC=temenosgroup,DC=com",
-    [string]$DefaultDomain  = "temenosgroup.com",
+    [string]$DefaultOU      = "OU=Users,OU=CORP,DC=domain_name,DC=com",
+    [string]$DefaultDomain  = "domain_name.com",
     [string]$TempPassword   = "Welcome@2025!",   # Force change on first login
     [string]$OutputPath     = "C:\Reports\Onboarding"
 )
