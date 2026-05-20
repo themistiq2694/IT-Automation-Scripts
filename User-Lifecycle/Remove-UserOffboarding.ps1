@@ -4,9 +4,9 @@
 #               converts mailbox to shared, and generates full audit report.
 #               Designed to be run same-day as the employee's last working day.
 # Author      : Mihail-Petre Dragutoiu
-# Context     : Part of standard offboarding SOP at Temenos Group
+# Context     : Part of standard offboarding SOP at the COmpany I used to work for
 # Requires    : ActiveDirectory, MSOnline, ExchangeOnlineManagement
-# Usage       : .\Remove-UserOffboarding.ps1 -UserPrincipalName "john.doe@temenosgroup.com" [-ManagerUPN "jane.smith@temenosgroup.com"]
+# Usage       : .\Remove-UserOffboarding.ps1 -UserPrincipalName "john.doe@domain_name.com" [-ManagerUPN "jane.smith@domain_name.com"]
 
 param(
     [Parameter(Mandatory)]
