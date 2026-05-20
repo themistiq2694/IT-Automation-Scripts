@@ -9,7 +9,7 @@ param(
     [switch]$SendReminder,
     [switch]$ExcludeAdmins,
     [string]$OutputPath    = "C:\Reports\MFA",
-    [string]$SenderAddress = "it-support@temenosgroup.com"
+    [string]$SenderAddress = "teambox@domain_name.com"
 )
 
 if (-not (Test-Path $OutputPath)) { New-Item -ItemType Directory -Path $OutputPath | Out-Null }
