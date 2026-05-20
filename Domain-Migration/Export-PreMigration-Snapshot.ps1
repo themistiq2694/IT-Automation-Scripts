@@ -3,8 +3,8 @@
 #               and enabled status before a domain suffix migration.
 #               Run BEFORE starting the migration. Save output as baseline reference.
 # Author      : Mihail-Petre Dragutoiu
-# Context     : Used during migration from europe.temenosgroup.com → temenosgroup.com
-# Usage       : .\Export-PreMigration-Snapshot.ps1 -OldSuffix "europe.temenosgroup.com"
+# Context     : Used during migration from europe.domain_name.com → domain_name.com
+# Usage       : .\Export-PreMigration-Snapshot.ps1 -OldSuffix "europe.domain_name.com"
 
 param(
     [Parameter(Mandatory)]
