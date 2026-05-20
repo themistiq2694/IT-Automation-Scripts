@@ -5,13 +5,13 @@
 # Author      : Mihail-Petre Dragutoiu
 # Context     : Used for department transfers and promotions at Temenos Group
 # Requires    : ActiveDirectory, ExchangeOnlineManagement
-# Usage       : .\Update-UserRoleChange.ps1 -UserPrincipalName "john.doe@temenosgroup.com" `
+# Usage       : .\Update-UserRoleChange.ps1 -UserPrincipalName "john.doe@domain_name.com" `
 #                   -NewTitle "Senior Analyst" -NewDepartment "Finance" `
-#                   -NewManager "jane.smith@temenosgroup.com" `
+#                   -NewManager "jane.smith@domain_name.com" `
 #                   -GroupsToAdd "Finance-Team,Finance-SharePoint" `
 #                   -GroupsToRemove "IT-Support,IT-SharePoint" `
-#                   -SharedMailboxToAdd "finance@temenosgroup.com" `
-#                   -SharedMailboxToRemove "it-support@temenosgroup.com"
+#                   -SharedMailboxToAdd "finance@domain_name.com" `
+#                   -SharedMailboxToRemove "it-support@domain_name.com"
 
 param(
     [Parameter(Mandatory)]
